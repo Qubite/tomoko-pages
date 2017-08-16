@@ -1,0 +1,30 @@
+<header>
+    <nav id="header" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tomoko-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="container tomoko-container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="tomoko-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="https://qubite.io" style="font-weight: bolder;">Qubite</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li {% if page.url == '/' %}class="active-nav-item"{% endif %}><a href="{{ site.baseurl }}/"><span class="sectionText">Tomoko</span></a></li>
+                        <li {% if page.url contains '/tutorial/' %}class="active-nav-item"{% endif %}><a href="{{ site.tutorial[0].url }}"><span class="sectionText">Tutorial</span></a></li>
+                        <li {% if page.url contains '/docs/' %}class="active-nav-item"{% endif %}><a href="{{ site.docs[0].url }}"><span class="sectionText">Documentation</span></a></li>
+                        <li {% if page.url == '/download.html' %}class="active-nav-item"{% endif %}><a href="{{ site.baseurl }}/download.html"><span class="sectionText">Download</span></a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>

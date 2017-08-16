@@ -1,0 +1,173 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #000019;
+	padding-top: 50px;
+    font-size: 16px;
+}
+
+.wrapper {
+    min-height: calc(100vh - 90px);
+}
+
+/* Header */
+
+#header {
+    background-color: #1f4284;
+    font-size: large;
+    border-bottom: none;
+}
+
+#header li > a {
+    color: whitesmoke;
+}
+
+/* On hover */
+
+#tomoko-nav .navbar-right li:hover > a {
+    color: #3e469b;
+}
+
+#tomoko-nav .navbar-right li:hover {
+    background-color: white;
+}
+
+/* Same but active */
+
+#header li.active-nav-item > a {
+    color: #3e469b;
+}
+
+#header li.active-nav-item {
+    background-color: white;
+}
+
+#footer {
+    padding: 1rem;
+    text-align: center;
+    height:40px;
+    background-color: #1f4284;
+    color: whitesmoke;
+}
+
+#footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.tomoko-slider {
+    padding: 50px 0;
+    height: 350px;
+    text-align: center;
+    margin: 0;
+    background-image: url('/public/slider.png');
+    background-repeat: repeat;
+    color: white;
+}
+
+.social-icons {
+    padding-top: 50px;
+}
+
+.tomoko-description {
+    padding: 100px 60px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.description-title {
+    padding: 50px 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .tomoko-container {
+        width: 570px;
+    }
+}
+@media (min-width: 992px) {
+    .tomoko-container {
+        width: 800px;
+    }
+}
+@media (min-width: 1200px) {
+    .tomoko-container {
+        width: 1024px;
+    }
+}
+
+.tomoko-container {
+    max-width: 100%;
+}
+
+pre.highlight {
+    border: solid 1px #ddd;
+    background: #fff;
+    line-height: 23px;
+    white-space: pre;
+    overflow-x: auto;
+    word-break: inherit;
+    word-wrap: inherit;
+}
+
+
+
+/* Tutorial */
+
+.tutorial-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tutorial-list li {
+    padding: 5px 15px;
+}
+
+.tutorial-list a {
+    text-decoration: none;
+    color: gray;
+}
+
+.tutorial-list a:hover {
+    color: black;
+}
+
+a.tutorial-current-item {
+    color: black;
+}
+
+.tutorial-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 30px 0;
+}
+
+.related-entries {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Documentation */
+
+.documentation-content {
+    margin-bottom: 50px;
+}
+
+/* Table */
+
+table{
+    table-layout: fixed;
+    width: 500px;
+}

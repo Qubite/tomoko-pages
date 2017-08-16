@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="container-fluid">
+    <div class="container tomoko-container">
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Tutorial</h3>
+                <ol class="tutorial-list">
+                {% for entry in site.tutorial %}
+                    <li><a {% if page.url == entry.url %}class="tutorial-current-item"{% endif %} href="{{ entry.url }}">{{ forloop.index }}. {{ entry.title }}</a></li>
+                {% endfor %}
+                </ol>
+            </div>
+            <div class="col-md-9">
+                <div class="tutorial-content">
+                {{ content }}
+                </div>
+                {% if site.tutorial.size > 1 %}
+                    <div class="related-entries clearfix">
+                    {% assign lastIndex = site.tutorial.size | minus:1 %}
+                    {% for entry in site.tutorial %}
+                        {% if entry.url == page.url %}
+                            {% if forloop.index0 > 0 %}
+                                {% assign prevIndex = forloop.index0 | minus:1 %}
+                                <div class="pull-left" style="text-align: left;">
+                                    <span>Previous</span><br/>
+                                    <span><a href="{{ site.tutorial[prevIndex].url }}">{{ site.tutorial[prevIndex].title }}</a></span>
+                                </div>
+                            {% endif %}
+                            {% if forloop.index0 < lastIndex %}
+                                {% assign nextIndex = forloop.index0 | plus:1 %}
+                                <div class="pull-right" style="text-align: right;">
+                                    <span>Next</span><br/>
+                                    <span><a href="{{ site.tutorial[nextIndex].url }}">{{ site.tutorial[nextIndex].title }}</a></span>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
