@@ -32,6 +32,12 @@ body {
     color: whitesmoke;
 }
 
+img.logo {
+    height: 30px;
+    margin: 10px;
+    width: auto;
+}
+
 /* On hover */
 
 #tomoko-nav .navbar-right li:hover > a {
