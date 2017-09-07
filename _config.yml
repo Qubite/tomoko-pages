@@ -1,4 +1,4 @@
-plugins: [jekyll-paginate, jekyll-analytics]
+plugins: [jekyll-paginate, jekyll-analytics, jekyll-sitemap]
 
 exclude:
   - 'vendor'
@@ -19,6 +19,7 @@ permalink:        pretty
 
 # Setup
 title:            Tomoko
+url:              'https://tomoko.qubite.io'
 baseurl:          ''
 
 author:
