@@ -17,7 +17,6 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-analytics (0.1.4)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -50,7 +49,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (>= 3.5.1)
-  jekyll-analytics
   jekyll-paginate
   jekyll-sitemap
   rouge
